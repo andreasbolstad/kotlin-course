@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="games.gameOfFifteen.TestGameOfFifteenInitializer" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-03-25T14:58:27" hostname="DESKTOP-KDU01MF" time="0.009">
+<testsuite name="games.gameOfFifteen.TestGameOfFifteenInitializer" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-03-25T16:39:15" hostname="DESKTOP-KDU01MF" time="0.001">
   <properties/>
-  <testcase name="testInitialPermutationIsEven" classname="games.gameOfFifteen.TestGameOfFifteenInitializer" time="0.009"/>
+  <testcase name="testInitialPermutationIsEven" classname="games.gameOfFifteen.TestGameOfFifteenInitializer" time="0.001"/>
   <testcase name="testInitialPermutationIsNotTrivial" classname="games.gameOfFifteen.TestGameOfFifteenInitializer" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

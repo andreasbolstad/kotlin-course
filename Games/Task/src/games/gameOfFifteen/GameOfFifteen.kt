@@ -16,6 +16,8 @@ class GameOfFifteen(private val initializer: GameOfFifteenInitializer) : Game {
 
     private val board = createGameBoard<Int?>(4)
 
+    private var emptyCell = Cell(4,4)
+
     override fun initialize() {
         val permIter = initializer.initialPermutation.iterator()
         val cellIter = board.getAllCells().iterator()
@@ -32,10 +34,15 @@ class GameOfFifteen(private val initializer: GameOfFifteenInitializer) : Game {
     }
 
     override fun processMove(direction: Direction) {
-
+        with(board) {
+            val nextEmptyCell = emptyCell.getNeighbour(direction.reversed()) ?: return
+            this[emptyCell] = this[nextEmptyCell]
+            this[nextEmptyCell] = null
+            emptyCell = nextEmptyCell
+        }
     }
 
-    override operator fun get(i: Int, j: Int): Int?
+    override fun get(i: Int, j: Int): Int? = board.run { get(getCell(i, j)) }
 
 }
 
